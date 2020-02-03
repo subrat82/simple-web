@@ -1,0 +1,14 @@
+- hosts: 127.0.0.1
+  vars:
+    ImageName: "subratit/projects-16th-nov"
+    Namespace: "local-namespace-dfly"
+    imageTag: "latest02"
+  #remote_user: ansible
+  become: true
+  become_user: root
+  gather_facts: no
+  connection: local
+  tasks:
+    - name: Create Namespace {{ Namespace }}
+      command: "/usr/local/bin/kubectl get namespaces"
+      ignore_errors: yes
