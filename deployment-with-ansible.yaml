@@ -10,5 +10,5 @@
   connection: local
   tasks:
     - name: Create Namespace {{ Namespace }}
-      command: "/usr/local/bin/kubectl get namespaces"
+      command: "/usr/local/bin/kubectl --version"
       ignore_errors: yes
