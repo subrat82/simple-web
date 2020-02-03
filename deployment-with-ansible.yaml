@@ -1,4 +1,4 @@
-- hosts: 127.0.0.1
+- hosts: testservers
   vars:
     ImageName: "subratit/projects-16th-nov"
     Namespace: "local-namespace-dfly"
